@@ -1,6 +1,6 @@
-# catch-wrap
+# Catch Wrap
 
-A simple, type-safe error handling utility for TypeScript that eliminates try-catch boilerplate and provides consistent error handling for both synchronous and asynchronous operations.
+Type-safe error handling for sync & async TypeScript operations, no try-catch boilerplate
 
 ## Features
 

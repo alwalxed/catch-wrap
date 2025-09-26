@@ -1,7 +1,7 @@
 {
   "name": "catch-wrap",
   "version": "1.0.1",
-  "description": "A simple, type-safe error handling utility for TypeScript that eliminates try-catch boilerplate",
+  "description": "Type-safe try-catch utility for TypeScript",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
@@ -18,10 +18,9 @@
     "LICENSE"
   ],
   "scripts": {
-    "build": "bun build index.ts --outdir dist --format esm --format cjs --target node --minify && bun run build:types",
-    "build:types": "tsc --emitDeclarationOnly --outDir dist",
-    "prepublishOnly": "bun run build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsup ./src/index.ts --format cjs,esm --dts",
+    "lint": "tsc",
+    "prepublishOnly": "npm run build"
   },
   "keywords": [
     "typescript",
@@ -35,7 +34,7 @@
     "maybe",
     "either"
   ],
-  "author": "Awa",
+  "author": "Awa <alwalxed@proton.me>",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -47,7 +46,8 @@
   "homepage": "https://github.com/alwalxed/catch-wrap#readme",
   "devDependencies": {
     "@types/bun": "latest",
-    "typescript": "^5"
+    "typescript": "^5",
+    "tsup": "^8.3.5"
   },
   "peerDependencies": {
     "typescript": ">=4.5.0"
