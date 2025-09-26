@@ -1,6 +1,6 @@
 {
   "name": "catch-wrap",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple, type-safe error handling utility for TypeScript that eliminates try-catch boilerplate",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
