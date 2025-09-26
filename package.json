@@ -1,5 +1,5 @@
 {
-  "name": "trycatcher",
+  "name": "catch-wrap",
   "version": "1.0.0",
   "description": "A simple, type-safe error handling utility for TypeScript that eliminates try-catch boilerplate",
   "main": "dist/index.js",
@@ -39,12 +39,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/alwalxed/trycatcher.git"
+    "url": "https://github.com/alwalxed/catch-wrap.git"
   },
   "bugs": {
-    "url": "https://github.com/alwalxed/trycatcher/issues"
+    "url": "https://github.com/alwalxed/catch-wrap/issues"
   },
-  "homepage": "https://github.com/alwalxed/trycatcher#readme",
+  "homepage": "https://github.com/alwalxed/catch-wrap#readme",
   "devDependencies": {
     "@types/bun": "latest",
     "typescript": "^5"

@@ -1,4 +1,4 @@
-# trycatcher
+# catch-wrap
 
 A simple, type-safe error handling utility for TypeScript that eliminates try-catch boilerplate and provides consistent error handling for both synchronous and asynchronous operations.
 
@@ -13,11 +13,11 @@ A simple, type-safe error handling utility for TypeScript that eliminates try-ca
 ## Installation
 
 ```bash
-pnpm add trycatcher
+pnpm add catch-wrap
 # or
-bun add trycatcher
-yarn add trycatcher
-npm install trycatcher
+bun add catch-wrap
+yarn add catch-wrap
+npm install catch-wrap
 ```
 
 ## Basic Usage
@@ -25,7 +25,7 @@ npm install trycatcher
 ### Async Operations
 
 ```typescript
-import { tryCatch } from 'trycatcher';
+import { tryCatch } from 'catch-wrap';
 
 const { data, error } = await tryCatch(fetch('/api/users'));
 if (error) {
@@ -51,7 +51,7 @@ if (error) {
 ### Synchronous Operations
 
 ```typescript
-import { tryCatch } from 'trycatcher';
+import { tryCatch } from 'catch-wrap';
 
 const { data, error } = tryCatch(() => JSON.parse(jsonString));
 if (error) {
@@ -68,7 +68,7 @@ console.log('Parsed data:', data);
 Perfect for database operations that return promise-like objects:
 
 ```typescript
-import { tryCatch } from 'trycatcher';
+import { tryCatch } from 'catch-wrap';
 
 const { data: user, error } = await tryCatch(
   db.select().from(users).where(eq(users.id, userId))
@@ -89,7 +89,7 @@ return users;
 
 ```typescript
 import fs from 'fs/promises';
-import { tryCatch } from 'trycatcher';
+import { tryCatch } from 'catch-wrap';
 
 const { data: fileContent, error } = await tryCatch(
   fs.readFile('./config.json', 'utf8')
